@@ -12,6 +12,5 @@ db_password = os.getenv('DB_PASSWORD')
 
 client = MongoClient(f"mongodb+srv://{urllib.parse.quote_plus(db_user)}:{urllib.parse.quote_plus(db_password)}@cluster0.w1u8l.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 )
-
-db = client.todo_db
+db = client.todo_db # db connected to client
 collection_name = db["todo_collection"]
